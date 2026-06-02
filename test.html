@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form Test</title>
+    <style>
+        body {
+            background-color: #222;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+
+        .form-container {
+            background-color: #2a2a2a;
+            padding: 40px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 450px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Matches your dark rounded design */
+        .contact-form input, 
+        .contact-form textarea {
+            background-color: rgb(104, 104, 104);
+            border: 1px solid transparent;
+            border-radius: 35px;
+            font-size: 16px;
+            padding: 18px 25px;
+            color: white;
+            outline: none;
+            box-sizing: border-box;
+            width: 100%;
+        }
+
+        /* Light placeholder color */
+        .contact-form input::placeholder, 
+        .contact-form textarea::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Textarea specific fixes for top-left alignment */
+        .contact-form textarea {
+            border-radius: 25px;
+            resize: none;
+        }
+
+        /* Yellow Accent Submit Button */
+        .submit-btn {
+            background-color: rgb(247, 199, 27);
+            color: #111;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 16px;
+            border: none;
+            border-radius: 35px;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.1s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: rgb(220, 175, 20);
+        }
+
+        .submit-btn:active {
+            transform: scale(0.98);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <form action="https://formsubmit.co/360temporary@gmail.com" method="POST" class="contact-form">
+            
+            <input type="text" name="_honey" style="display:none">
+            
+            <input type="text" name="name" placeholder="Your Name" required>
+
+            <input type="email" name="email" placeholder="Your Email" required>
+
+            <input type="text" name="subject" placeholder="Subject" required>
+
+            <textarea name="message" placeholder="Your msg" rows="6" required></textarea>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
